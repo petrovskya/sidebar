@@ -2,11 +2,16 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/sidebar/',
+  base: command === 'serve' ? '/' : '/sidebar/',
+  server: {
+    open: command === 'serve' ? true : 
+    '/sidebar/',
+
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
   },
-})
+}));
