@@ -1,5 +1,9 @@
 # Headless Sidebar Menu (React + TypeScript + Tailwind)
 
+## Live
+
+- Deployed: https://petrovskya.github.io/sidebar/
+
 A headless, accessible sidebar menu with a clean component API:
 - Headless logic in providers (no styling, no router inside).
 - Styled AppMenu that integrates with React Router (wrapper approach).
