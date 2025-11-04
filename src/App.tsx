@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { BarcodeIcon, BellIcon, BoxIcon,  ChartColumnBigIcon, CircleCheckBigIcon, CircleQuestionMarkIcon, ContainerIcon, CreditCardIcon, FlagTriangleRightIcon, FlameIcon, ListIcon, SettingsIcon, ShoppingBasketIcon, ShoppingCartIcon, StarIcon, TicketIcon, UsersIcon } from 'lucide-react';
 
 import { AppMenu } from './components/AppMenu/AppMenu';
@@ -12,7 +12,7 @@ const Page = ({ title }: { title: string }) => (
 
 function App() {
   return (
-    <Router basename={import.meta.env.VITE_BASE_URL}>
+    <Router>
       <div className="flex min-h-screen text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 ">
         <AppMenu>
           <AppMenu.Item to="/trends" icon={<ChartColumnBigIcon />} label="Trends" />
